@@ -23,13 +23,23 @@ public class TongCacSoDuongCheoMang2Chieu {
             System.out.println(Arrays.toString(array[i]));
         }
 
-        int total = 0;
-        System.out.println("Các giá trị trên đường chéo là : ");
+        int totalChinh = 0;
+        System.out.println("Các giá trị trên đường chéo chính là : ");
         for (int i = 0; i < num; i++) {
             System.out.print(array[i][i] + " ");
-            total += array[i][i];
+            totalChinh += array[i][i];
         }
         System.out.println();
-        System.out.println("Tổng của các số trên đường chéo trong ma trận vuông là : " + total);
+
+        int totalPhu = 0;
+        System.out.println("Các giá trị trên đường chéo phụ là : ");
+        for (int j = 0; j < num; j++) {
+            System.out.print(array[j][num - j - 1] + " ");
+            totalPhu += array[j][num - j - 1];
+        }
+        System.out.println();
+
+        System.out.println("Tổng của các số trên đường chéo chính trong ma trận vuông là : " + totalChinh);
+        System.out.println("Tổng của các số trên đường chéo phụ trong ma trận vuông là : " + totalPhu);
     }
 }
